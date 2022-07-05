@@ -6,23 +6,23 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package portfolio20
+ * @package portfolio1
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'portfolio' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'portfolio1' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'portfolio' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'portfolio1' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'portfolio' ), 'portfolio', '<a href="http://myeishatrimble.com">Myeisha Trimble</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'portfolio1' ), 'portfolio1', '<a href="http://myeishatrimble.com">Myeisha Trimble</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

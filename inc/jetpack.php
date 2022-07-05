@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package portfolio20
+ * @package portfolio1
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function portfolio_jetpack_setup() {
+function portfolio1_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'portfolio_infinite_scroll_render',
+			'render'    => 'portfolio1_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function portfolio_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'portfolio-style',
+				'stylesheet' => 'portfolio1-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function portfolio_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'portfolio_jetpack_setup' );
+add_action( 'after_setup_theme', 'portfolio1_jetpack_setup' );
 
-if ( ! function_exists( 'portfolio_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'portfolio1_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function portfolio_infinite_scroll_render() {
+	function portfolio1_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

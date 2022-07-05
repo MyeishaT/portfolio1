@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package portfolio20
+ * @package portfolio1
  */
 
 ?>
@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php portfolio_post_thumbnail(); ?>
+	<?php portfolio1_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -22,7 +22,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfolio' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfolio1' ),
 				'after'  => '</div>',
 			)
 		);
@@ -36,7 +36,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'portfolio' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'portfolio1' ),
 						array(
 							'span' => array(
 								'class' => array(),
