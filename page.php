@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package portfolio20
+ * @package portfolio1
  */
 
 get_header();

@@ -1,4 +1,4 @@
-=== portfolio20 ===
+=== portfolio1 ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -10,7 +10,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called portfolio20.
+A starter theme called portfolio1.
 
 == Description ==
 
@@ -26,7 +26,7 @@ Welcome to my new and improved portfolio
 
 = Does this theme support any plugins? =
 
-portfolio20 includes support for WooCommerce and for Infinite Scroll in Jetpack.
+portfolio1 includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

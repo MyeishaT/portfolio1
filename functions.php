@@ -1,10 +1,10 @@
 <?php
 /**
- * portfolio20 functions and definitions
+ * portfolio1 functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package portfolio20
+ * @package portfolio1
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -19,14 +19,14 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function portfolio_setup() {
+function portfolio1_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on portfolio20, use a find and replace
-		* to change 'portfolio' to the name of your theme in all the template files.
+		* If you're building a theme based on portfolio1, use a find and replace
+		* to change 'portfolio1' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'portfolio', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'portfolio1', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,7 +49,7 @@ function portfolio_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'portfolio' ),
+			'menu-1' => esc_html__( 'Primary', 'portfolio1' ),
 		)
 	);
 
@@ -74,7 +74,7 @@ function portfolio_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'portfolio_custom_background_args',
+			'portfolio1_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -100,7 +100,7 @@ function portfolio_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'portfolio_setup' );
+add_action( 'after_setup_theme', 'portfolio1_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,22 +109,22 @@ add_action( 'after_setup_theme', 'portfolio_setup' );
  *
  * @global int $content_width
  */
-function portfolio_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'portfolio_content_width', 640 );
+function portfolio1_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'portfolio1_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'portfolio_content_width', 0 );
+add_action( 'after_setup_theme', 'portfolio1_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function portfolio_widgets_init() {
+function portfolio1_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'portfolio' ),
+			'name'          => esc_html__( 'Sidebar', 'portfolio1' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'portfolio' ),
+			'description'   => esc_html__( 'Add widgets here.', 'portfolio1' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -132,22 +132,22 @@ function portfolio_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'portfolio_widgets_init' );
+add_action( 'widgets_init', 'portfolio1_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function portfolio_scripts() {
-	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );
+function portfolio1_scripts() {
+	wp_enqueue_style( 'portfolio1-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'portfolio1-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'portfolio1-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
+add_action( 'wp_enqueue_scripts', 'portfolio1_scripts' );
 
 /**
  * Implement the Custom Header feature.
